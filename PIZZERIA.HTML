@@ -1,0 +1,19 @@
+ubuntu@sandbox:~ $ cd /home/ubuntu/pizzeria-los-amigos && pnpm build > /tmp/pizza_build.log 2>&1 && tail -n 40 /tmp/pizza_build.log
+> pizzeria-los-amigos@1.0.0 build /home/ubuntu/pizzeria-los-amigos
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+vite v7.1.9 building for production...
+transforming...
+✓ 1622 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/public/index.html                 368.18 kB │ gzip: 105.76 kB
+../dist/public/assets/index-BpgD1ipN.css  128.74 kB │ gzip:  20.82 kB
+../dist/public/assets/index-CrYq2dWr.js   566.50 kB │ gzip: 166.35 kB
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.64s
+  dist/index.js  788b 
+⚡ Done in 3ms
+ubuntu@sandbox:~/pizzeria-los-amigos $
